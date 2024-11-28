@@ -108,6 +108,10 @@ ol {
   margin: 0;
 }
 
+section {
+  background: #100028;
+}
+
 /*---------------------
   Helper CSS
 -----------------------*/
@@ -526,13 +530,50 @@ ol {
 }
 
 /*---------------------
+  Services
+-----------------------*/
+
+.services .opacity {
+  background: linear-gradient(
+    to bottom,
+    #10002889 0%,
+    #100028 50%,
+    #10002889 100% /* Bottom */
+  );
+
+  padding: 8rem 5rem;
+}
+
+
+.dark-edge-title {
+  color: #fff;
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.services__title p {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+/*---------------------
   Work
 -----------------------*/
 .work {
   overflow: hidden;
   background: #100028;
 }
-
+.work-opacity {
+  background: linear-gradient(
+    to bottom,
+    rgb(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.7) 50%,
+    rgba(0, 0, 0, 1) 100% /* Bottom */
+  );
+}
 .work__gallery {
   margin-right: -10px;
 }
@@ -726,7 +767,6 @@ ol {
 .teamgal {
   padding-bottom: 90px;
 }
-
 
 .team__item {
   border-radius: 15px;
@@ -1162,67 +1202,6 @@ ol {
   font-size: 14px;
   font-weight: 300px;
   display: inline-block;
-}
-
-/*---------------------
-  Services
------------------------*/
-.services {
-  padding-bottom: 60px;
-  padding-top: 110px;
-
-  background: #100028;
-  overflow: hidden;
-
-  background-image: linear-gradient(rgba(0, 0, 0, 0.589), rgba(0, 0, 0, 0.595)),
-    url("/img/nebula/galaxy.jpg");
-  background-size: contain;
-  background-size: cover; /* Ensures it stretches to fit the width */
-  /* background-position: center; Centers the image vertically and horizontally */
-  /* background-repeat: no-repeat;*/
-}
-
-.services__title p {
-  margin-bottom: 45px;
-}
-
-.services__item {
-  margin-bottom: 45px;
-}
-.services__item:hover .services__item__icon:after {
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-.services__item h4 {
-  color: #ffffff;
-  font-size: 22px;
-  font-weight: 700;
-  margin-top: 26px;
-  margin-bottom: 18px;
-}
-.services__item p {
-  margin-bottom: 0;
-}
-
-.services__item__icon {
-  position: relative;
-  height: 70px;
-  width: 70px;
-  line-height: 70px;
-  text-align: center;
-}
-.services__item__icon:after {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  border: 2px solid #00bfe7;
-  content: "";
-  -webkit-transition: all, 0.5s;
-  -o-transition: all, 0.5s;
-  transition: all, 0.5s;
 }
 
 /*---------------------
@@ -1877,11 +1856,6 @@ ol {
   .hero__slider.owl-carousel .owl-dots {
     max-width: 690px !important;
   }
-
-  .services__title {
-    margin-bottom: 50px;
-  }
-
   .counter__item {
     -webkit-transform: rotate(0);
     -ms-transform: rotate(0);
@@ -1999,8 +1973,8 @@ ol {
 }
 /* Wide Mobile = 480px */
 @media only screen and (max-width: 767px) {
-  .services__title {
-    margin-bottom: 50px;
+  .dark-edge-title {
+    font-size: 2rem;
   }
 
   .counter__item {
@@ -2216,9 +2190,5 @@ ol {
 
   .blog__details__quote {
     padding: 30px 40px 35px 35px;
-  }
-  .services__title {
-    text-align: left; /* Ensure text is left-aligned */
-    margin-left: 0; /* Prevent unnecessary left margin */
   }
 }
