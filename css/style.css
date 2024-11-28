@@ -538,6 +538,7 @@ ol {
 }
 
 .work__item {
+  border-radius: 13px;
   height: 311px !important;
   width: calc(16.67% - 10px);
   margin-right: 10px;
@@ -559,7 +560,7 @@ ol {
   bottom: 0;
 }
 .work__item.large__item {
-  height: 633px !important;
+  height: 310px !important;
   width: calc(33.33% - 10px);
 }
 .work__item.wide__item {
@@ -719,7 +720,16 @@ ol {
   margin-bottom: 90px;
 }
 
+.section-title.team__gal {
+  margin-bottom: 11px;
+}
+.teamgal {
+  padding-bottom: 90px;
+}
+
+
 .team__item {
+  border-radius: 15px;
   height: 390px;
   position: relative;
   overflow: hidden;
