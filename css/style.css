@@ -81,7 +81,7 @@ p {
 
 img {
   max-width: 25%;
-  border-radius: 15px; /* Adds corner circles */
+  border-radius: 0px; /* Adds corner circles */
 }
 .services__image img {
   max-width: 100%;
@@ -2191,4 +2191,3 @@ section {
   }
 }
 
-}
