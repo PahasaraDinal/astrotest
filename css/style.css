@@ -83,6 +83,7 @@ img {
   max-width: 25%;
   border-radius: 15px; /* Adds corner circles */
   
+  
 }
 .services__image img {
   max-width: 100%;
@@ -2209,5 +2210,6 @@ ol {
     text-align: left; /* Ensure text is left-aligned */
     margin-left: 0; /* Prevent unnecessary left margin */
 }
+
 
 }
