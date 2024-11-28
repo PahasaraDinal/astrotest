@@ -1,5 +1,5 @@
 // Set the date we're counting down to
-var countDownDate = new Date("Dec 01, 2024 00:00:00").getTime();
+var countDownDate = new Date("Dec 5, 2024 00:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function () {
@@ -16,13 +16,14 @@ var x = setInterval(function () {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Display the result in the element with id="demo"
-  document.getElementById("countdownTimer").innerHTML =
-    days + "D " + hours + "H " + minutes + "M " + seconds + "S ";
+  document.getElementById(
+    "countdownTimer"
+  ).innerHTML = `Registrations Will be Opened in <br /> ${days}D ${hours}H ${minutes}m ${seconds}s`;
 
   // If the count down is finished, write some text
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("countdownTimer").innerHTML =
       "<a href='#' class='primary-btn'>Register your Team</a>";
-  }
-}, 1000);
+  }
+}, 1000);
