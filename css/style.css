@@ -84,11 +84,6 @@ p {
   margin: 0 0 15px 0;
 }
 
-img {
-  max-width: 25%;
-  border-radius: 0px;
-}
-
 input:focus,
 select:focus,
 button:focus,
@@ -314,15 +309,21 @@ section {
 }
 
 .header__logo {
-  padding: 30px 0;
+  max-width: 120px;
+  padding: 10px 0;
 }
+
 .header__logo a {
   display: inline-block;
 }
 
+.nav-logo {
+  width: 50px;
+}
+
 .header__nav__option {
   text-align: right;
-  padding: 28px 0px;
+  padding: 15px 0px;
 }
 
 .header__nav__menu {
@@ -562,6 +563,10 @@ section {
 .day-counter {
   padding: 0.75rem 1rem;
   border-radius: 16px;
+}
+
+#countdownTimer {
+  border: 1px solid red;
 }
 
 /*---------------------
@@ -809,7 +814,6 @@ section {
   top: 0;
   height: 100%;
   width: 100%;
-  background: url(../img/team/team-hover.png);
   content: "";
   z-index: -1;
 }
