@@ -18,7 +18,7 @@ var x = setInterval(function () {
   // Display the result in the element with id="demo"
   document.getElementById(
     "countdownTimer"
-  ).innerHTML = `<p class='text-center'>Registrations Will be Opened in</p> <br /> <span class='bg-light day-counter'>${days}D ${hours}H ${minutes}m ${seconds}s </span>`;
+  ).innerHTML = `<p class='text-center'>1st Round Registrations Will be Opened in</p> <br /> <span class='bg-light day-counter'>${days}D ${hours}H ${minutes}m ${seconds}s </span>`;
 
   // If the count down is finished, write some text
   if (distance < 0) {
