@@ -27,6 +27,11 @@
 /*----------------------------------------*/
 /* Template default CSS
 /*----------------------------------------*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 html,
 body {
   height: 100%;
@@ -81,11 +86,7 @@ p {
 
 img {
   max-width: 25%;
-  border-radius: 0px; /* Adds corner circles */
-}
-.services__image img {
-  max-width: 100%;
-  border-radius: 15px; /* Adds corner circles */
+  border-radius: 0px;
 }
 
 input:focus,
@@ -537,13 +538,12 @@ section {
   background: linear-gradient(
     to bottom,
     #10002889 0%,
-    #100028 50%,
+    #020005 50%,
     #10002889 100% /* Bottom */
   );
 
   padding: 8rem 5rem;
 }
-
 
 .dark-edge-title {
   color: #fff;
@@ -559,13 +559,18 @@ section {
   margin-bottom: 0;
 }
 
+.day-counter {
+  padding: 0.75rem 1rem;
+  border-radius: 16px;
+}
+
 /*---------------------
   Work
 -----------------------*/
 .work {
   overflow: hidden;
   /* background: #100028; */
-    background: linear-gradient(
+  background: linear-gradient(
     to bottom,
     rgb(0, 0, 0, 1) 0%,
     rgb(0, 0, 0) 50%,
@@ -664,8 +669,8 @@ section {
 -----------------------*/
 .counter {
   background: #100028;
-  height: 840px;
-  padding-top: 380px;
+  height: 560px;
+  padding-top: 280px;
   overflow: hidden;
 }
 
@@ -678,8 +683,8 @@ section {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
-  height: 255px;
-  width: 255px;
+  height: 170px;
+  width: 170px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -737,7 +742,7 @@ section {
   transform: rotate(-45deg);
 }
 .counter__item__text h2 {
-  font-size: 60px;
+  font-size: 40px;
   color: #ffffff;
   font-weight: 700;
   margin-bottom: 6px;
@@ -745,6 +750,7 @@ section {
 }
 .counter__item__text p {
   color: #ffffff;
+  font-size: 12px;
   margin-bottom: 0;
 }
 
@@ -1971,8 +1977,16 @@ section {
 }
 /* Wide Mobile = 480px */
 @media only screen and (max-width: 767px) {
+  .services .section-title span {
+    font-size: 1rem;
+  }
   .dark-edge-title {
     font-size: 2rem;
+  }
+
+  .day-counter {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem;
   }
 
   .counter__item {
@@ -2190,4 +2204,3 @@ section {
     padding: 30px 40px 35px 35px;
   }
 }
-
