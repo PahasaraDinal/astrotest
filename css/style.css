@@ -37,6 +37,7 @@ body {
   height: 100%;
   font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -78,7 +79,7 @@ h6 {
 p {
   font-size: 16px;
   font-family: "Poppins", sans-serif;
-  color: #adadad;
+  color: #c6c6c6; /* #adadad */
   font-weight: 400;
   line-height: 26px;
   margin: 0 0 15px 0;
@@ -95,7 +96,7 @@ a:hover,
 a:focus {
   text-decoration: none;
   outline: none;
-  color: #fff;
+  color: #00bfe7;
 }
 
 ul,
@@ -668,7 +669,7 @@ section {
   font-weight: 700;
 }
 .work__item__hover ul li {
-  color: #adadad;
+  color: #c6c6c6;
   list-style: none;
   font-size: 16px;
   margin-right: 23px;
@@ -954,7 +955,7 @@ section {
   list-style: none;
 }
 .footer__option__item ul li a {
-  color: #adadad;
+  color: #c6c6c6;
   font-size: 16px;
   font-weight: 300;
   line-height: 32px;
@@ -969,22 +970,22 @@ section {
   border: 1px solid #544e5e;
   background: transparent;
   font-size: 16px;
-  color: #adadad;
+  color: #c6c6c6;
 }
 .footer__option__item form input::-webkit-input-placeholder {
-  color: #adadad;
+  color: #c6c6c6;
 }
 .footer__option__item form input::-moz-placeholder {
-  color: #adadad;
+  color: #c6c6c6;
 }
 .footer__option__item form input:-ms-input-placeholder {
-  color: #adadad;
+  color: #c6c6c6;
 }
 .footer__option__item form input::-ms-input-placeholder {
-  color: #adadad;
+  color: #c6c6c6;
 }
 .footer__option__item form input::placeholder {
-  color: #adadad;
+  color: #c6c6c6;
 }
 .footer__option__item form button {
   font-size: 20px;
@@ -1043,12 +1044,12 @@ section {
   right: -22px;
   top: -3px;
   content: "/";
-  color: #adadad;
+  color: #c6c6c6;
   font-size: 20px;
 }
 .breadcrumb__links span {
   font-size: 16px;
-  color: #adadad;
+  color: #c6c6c6;
   font-weight: 300;
   display: inline-block;
 }
@@ -1071,7 +1072,7 @@ section {
 }
 
 .about__text {
-  padding-left: 30px;
+  padding: 30px;
 }
 .about__text .services__item .services__item__icon:after {
   border-color: #281a3e;
@@ -1079,6 +1080,33 @@ section {
 
 .about__text__desc {
   margin-top: -10px;
+}
+
+.rules-title {
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.about__text__desc h5 {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.about__text__desc ul ul {
+  margin-left: 20px;
+  padding-left: 20px;
+}
+
+.about__text__desc li {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  color: #c6c6c6;
+  font-weight: 400;
+  line-height: 26px;
+  margin: 0 0 15px 0;
 }
 
 .result-bg {
@@ -1198,7 +1226,7 @@ section {
 .portfolio__filter li {
   list-style: none;
   font-size: 16px;
-  color: #adadad;
+  color: #c6c6c6;
   margin-right: 5px;
   display: inline-block;
   cursor: pointer;
@@ -1274,7 +1302,7 @@ section {
   font-weight: 300;
   margin-right: 24px;
   position: relative;
-  color: #adadad;
+  color: #c6c6c6;
 }
 .portfolio__item__text ul li:after {
   position: absolute;
@@ -1291,7 +1319,7 @@ section {
 .portfolio__item__text span {
   font-size: 16px;
   font-weight: 300;
-  color: #adadad;
+  color: #c6c6c6;
   display: block;
 }
 
@@ -1479,7 +1507,7 @@ section {
 }
 .blog__details__quote h6 {
   font-size: 15px;
-  color: #adadad;
+  color: #c6c6c6;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   color: #ffffff;
@@ -1631,7 +1659,7 @@ section {
   border: 1px solid rgba(225, 225, 225, 0.5);
   background: transparent;
   font-size: 16px;
-  color: #adadad;
+  color: #c6c6c6;
   padding-top: 12px;
   padding-left: 20px;
   font-weight: 300;
@@ -1639,7 +1667,7 @@ section {
   resize: none;
 }
 .blog__details__comment form textarea:placeholder {
-  color: #adadad;
+  color: #c6c6c6;
 }
 
 .input__list {
@@ -1653,14 +1681,14 @@ section {
   border: 1px solid rgba(225, 225, 225, 0.5);
   background: transparent;
   font-size: 16px;
-  color: #adadad;
+  color: #c6c6c6;
   padding-left: 20px;
   font-weight: 300;
   margin-right: 20px;
   margin-bottom: 20px;
 }
 .input__list input:placeholder {
-  color: #adadad;
+  color: #c6c6c6;
 }
 
 /*---------------------
@@ -1733,7 +1761,7 @@ section {
   border-radius: 10px;
   background: transparent;
   font-size: 16px;
-  color: #adadad;
+  color: #c6c6c6;
   padding-left: 20px;
   font-weight: 300;
   margin-right: 20px;
@@ -1743,7 +1771,7 @@ section {
   transition: all, 0.3s;
 }
 .contact__form form input:placeholder {
-  color: #adadad;
+  color: #c6c6c6;
 }
 .contact__form form input:focus {
   border-color: #e1e1e1;
@@ -1754,7 +1782,7 @@ section {
   border: 1px solid rgba(225, 225, 225, 0.5);
   background: transparent;
   font-size: 16px;
-  color: #adadad;
+  color: #c6c6c6;
   padding-top: 12px;
   padding-left: 20px;
   font-weight: 300;
@@ -1766,7 +1794,7 @@ section {
   border-radius: 10px;
 }
 .contact__form form textarea:placeholder {
-  color: #adadad;
+  color: #c6c6c6;
 }
 .contact__form form textarea:focus {
   border-color: #e1e1e1;
@@ -1833,7 +1861,7 @@ section {
   }
 
   .about__text {
-    padding-left: 0;
+    padding: 10px;
   }
 
   .portfolio__filter li {
@@ -1952,7 +1980,10 @@ section {
   }
 
   .about__text {
-    padding-left: 0;
+    padding: 5px;
+  }
+  .about__text__desc ul {
+    list-style-type: none;
   }
 
   .hero__slider.owl-carousel .owl-dots {
