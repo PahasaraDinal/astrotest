@@ -543,7 +543,16 @@ section {
     #10002889 100% /* Bottom */
   );
 
-  padding: 8rem 5rem;
+  padding: 8rem 1.5rem;
+}
+
+.dark-edge-logo {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.dark-edge-logo img {
+  width: 100%;
 }
 
 .dark-edge-title {
@@ -555,18 +564,27 @@ section {
 
 .services__title p {
   color: #ffffff;
-  font-size: 1.25rem;
+  font-size: 2rem;
   font-weight: 300;
   margin-bottom: 0;
+}
+
+.register-text {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-bottom: 0;
+  padding: .25rem;
+  border-radius: 10px;
 }
 
 .day-counter {
   padding: 0.75rem 1rem;
   border-radius: 16px;
-}
-
-#countdownTimer {
-  border: 1px solid red;
+  width: 50%;
+  max-width: 300px;
+  margin: 0 auto;
+  font-size: 50px;
 }
 
 /*---------------------
@@ -1984,13 +2002,24 @@ section {
   .services .section-title span {
     font-size: 1rem;
   }
+  .dark-edge-logo {
+    width: 120px;
+  }
+
   .dark-edge-title {
     font-size: 2rem;
   }
 
+  .services__title p {
+    color: #ffffff;
+    font-size: 1.75rem;
+    font-weight: 300;
+    margin-bottom: 0;
+  }
+
   .day-counter {
+    width: 100%;
     padding: 0.5rem 0.75rem;
-    font-size: 0.75rem;
   }
 
   .counter__item {
