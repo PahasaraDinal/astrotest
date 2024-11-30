@@ -767,6 +767,7 @@ section {
 }
 .team__item__text:before {
   position: absolute;
+  background: url("../img/team/team-hover.png");
   left: 0;
   top: 0;
   height: 100%;
