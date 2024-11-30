@@ -1896,6 +1896,9 @@ section {
   .header__logo {
     max-width: 150px;
   }
+  .set-bg {
+    background-position: top left;
+  }
   .nav-logo {
     width: 70px;
   }
