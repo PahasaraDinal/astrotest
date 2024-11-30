@@ -743,7 +743,7 @@ section {
 
 .team__item {
   border-radius: 15px;
-  height: 350px;
+  height: 390px;
   position: relative;
   overflow: hidden;
   margin: 0.5rem;
@@ -1859,14 +1859,15 @@ section {
   }
 
   .slicknav_nav {
-    background: #222222;
+    background: #100028;
+    border-radius: 0.5rem;
   }
 
   .slicknav_btn {
     position: absolute;
     right: 10px;
-    top: 26px;
-    background: #00bfe7;
+    top: 10px;
+    background: #100028;
   }
 
   .header .container {
@@ -1879,9 +1880,15 @@ section {
 }
 /* Wide Mobile = 480px */
 @media only screen and (max-width: 767px) {
+  .section-title h2::after {
+    right: 0;
+    margin: 0 auto;
+  }
+
   .services .section-title span {
     font-size: 1rem;
   }
+
   .dark-edge-logo {
     width: 120px;
   }
@@ -1962,14 +1969,15 @@ section {
   }
 
   .slicknav_nav {
-    background: #222222;
+    background: #100028;
+    border-radius: 0.5rem;
   }
 
   .slicknav_btn {
     position: absolute;
     right: 10px;
-    top: 26px;
-    background: #00bfe7;
+    top: 10px;
+    background: #100028;
   }
 
   .header .container {
