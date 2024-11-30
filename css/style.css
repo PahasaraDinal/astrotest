@@ -767,6 +767,7 @@ section {
 }
 .team__item__text:before {
   position: absolute;
+  background: url("../img/team/team-hover.png");
   left: 0;
   top: 0;
   height: 100%;
@@ -1894,6 +1895,9 @@ section {
 @media only screen and (max-width: 767px) {
   .header__logo {
     max-width: 150px;
+  }
+  .set-bg {
+    background-position: top left;
   }
   .nav-logo {
     width: 70px;
