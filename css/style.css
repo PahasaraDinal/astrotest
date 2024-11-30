@@ -232,6 +232,7 @@ section {
   letter-spacing: 2px;
   padding: 14px 34px 12px;
   width: 100%;
+  border-radius: 10px;
 }
 
 /* Preloder */
@@ -1719,6 +1720,7 @@ section {
   height: 50px;
   width: 100%;
   border: 1px solid rgba(225, 225, 225, 0.5);
+  border-radius: 10px;
   background: transparent;
   font-size: 16px;
   color: #adadad;
@@ -1751,6 +1753,7 @@ section {
   -webkit-transition: all, 0.3s;
   -o-transition: all, 0.3s;
   transition: all, 0.3s;
+  border-radius: 10px;
 }
 .contact__form form textarea:placeholder {
   color: #adadad;
