@@ -18,12 +18,12 @@ var x = setInterval(function () {
   // Display the result in the element with id="demo"
   document.getElementById(
     "countdownTimer"
-  ).innerHTML = `<p class='text-center'>1st Round Registrations Will be Opened in</p> <br /> <span class='bg-light day-counter'>${days}D ${hours}H ${minutes}m ${seconds}s </span>`;
+  ).innerHTML = `<span class='register-text text-center'>1st Round Registrations Will be Opened in</span> <br /><br /> <p class='bg-dark day-counter'>${days}D ${hours}H ${minutes}m ${seconds}s </p>`;
 
   // If the count down is finished, write some text
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("countdownTimer").innerHTML =
-      "<a href='#' class='primary-btn'>Register your Team</a>";
+      "<span class='register-text bg-info'>First Round Registrations</span><br /><br /><a href='#' class='primary-btn'>Register your Team</a>";
   }
 }, 1000);
