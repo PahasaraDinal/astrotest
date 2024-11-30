@@ -13,15 +13,15 @@
   $(window).on("load", function () {
     $(".loader").fadeOut();
     $("#preloder").delay(200).fadeOut("slow");
-    /*------------------ Portfolio filter --------------------*/
-    $(".portfolio__filter li").on("click", function () {
-      $(".portfolio__filter li").removeClass("active");
-      $(this).addClass("active");
-    });
-    if ($(".portfolio__gallery").length > 0) {
-      var containerEl = document.querySelector(".portfolio__gallery");
-      var mixer = mixitup(containerEl);
-    }
+    // /*------------------ Portfolio filter --------------------*/
+    // $(".portfolio__filter li").on("click", function () {
+    //   $(".portfolio__filter li").removeClass("active");
+    //   $(this).addClass("active");
+    // });
+    // if ($(".portfolio__gallery").length > 0) {
+    //   var containerEl = document.querySelector(".portfolio__gallery");
+    //   var mixer = mixitup(containerEl);
+    // }
   });
   /*------------------ Background Set --------------------*/
   $(".set-bg").each(function () {
@@ -52,17 +52,17 @@
     autoplay: true,
   });
   /*------------------ Testimonial Slider --------------------*/
-  $(".testimonial__slider").owlCarousel({
-    loop: true,
-    margin: 0,
-    items: 3,
-    dots: true,
-    dotsEach: 2,
-    smartSpeed: 1200,
-    autoHeight: false,
-    autoplay: true,
-    responsive: { 992: { items: 3 }, 768: { items: 2 }, 320: { items: 1 } },
-  });
+  // $(".testimonial__slider").owlCarousel({
+  //   loop: true,
+  //   margin: 0,
+  //   items: 3,
+  //   dots: true,
+  //   dotsEach: 2,
+  //   smartSpeed: 1200,
+  //   autoHeight: false,
+  //   autoplay: true,
+  //   responsive: { 992: { items: 3 }, 768: { items: 2 }, 320: { items: 1 } },
+  // });
   /*------------------ Latest Slider --------------------*/
   $(".latest__slider").owlCarousel({
     loop: true,
@@ -76,23 +76,23 @@
     responsive: { 992: { items: 3 }, 768: { items: 2 }, 320: { items: 1 } },
   });
   /*------------------ Logo Slider --------------------*/
-  $(".logo__carousel").owlCarousel({
-    loop: true,
-    margin: 100,
-    items: 6,
-    dots: false,
-    smartSpeed: 1200,
-    autoHeight: false,
-    autoplay: true,
-    responsive: {
-      992: { items: 5 },
-      768: { items: 4 },
-      480: { items: 3 },
-      320: { items: 2 },
-    },
-  });
+  // $(".logo__carousel").owlCarousel({
+  //   loop: true,
+  //   margin: 100,
+  //   items: 6,
+  //   dots: false,
+  //   smartSpeed: 1200,
+  //   autoHeight: false,
+  //   autoplay: true,
+  //   responsive: {
+  //     992: { items: 5 },
+  //     768: { items: 4 },
+  //     480: { items: 3 },
+  //     320: { items: 2 },
+  //   },
+  // });
   /*------------------ Video Popup --------------------*/
-  $(".video-popup").magnificPopup({ type: "iframe" });
+  // $(".video-popup").magnificPopup({ type: "iframe" });
   /*------------------ Counter --------------------*/
   $(".counter_num").each(function () {
     $(this)
