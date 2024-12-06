@@ -301,12 +301,13 @@ section {
   Header
 -----------------------*/
 .header {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   background: transparent;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   z-index: 9;
 }
 
@@ -587,6 +588,11 @@ section {
   max-width: 300px;
   margin: 0 auto;
   font-size: 50px;
+}
+
+#howcompetitionworks,
+#rules {
+  scroll-margin-top: 60px; /* Adjust this value to match your header height */
 }
 
 /*---------------------
@@ -1192,11 +1198,335 @@ section {
 }
 
 /*---------------------
-  Services Page
+  Registration Page
 -----------------------*/
-.services-page {
+
+#instructionModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.instruction-modal-content {
   background: #100028;
-  padding-bottom: 50px;
+  color: white;
+  padding: 25px;
+  border-radius: 8px;
+  width: 80%;
+  height: 60vh;
+  overflow-y: auto;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.instruction-modal-content ul {
+  text-align: left;
+  padding: 10px;
+  margin-top: 10px;
+}
+.instruction-modal-content ul ul {
+  padding-left: 15px;
+}
+
+.card {
+  background: #100028;
+  color: white;
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  border: 2px solid red;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+/* Mark the active step: */
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #04aa6d;
+}
+
+.registration-btn,
+.modal-btn {
+  display: inline-block;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  padding: 14px 32px 12px;
+  background: none;
+  outline: none;
+  border: none;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  z-index: 1;
+}
+
+.modal-btn {
+  color: #00bfe7;
+}
+
+.registration-loader {
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: regspin 1s linear infinite;
+}
+
+@keyframes regspin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Center the spinner */
+#spinner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+/* Modal container */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+}
+/* Modal content box */
+.modal-content {
+  font-family: "Poppins", sans-serif;
+  background: #100028;
+  color: white;
+  margin: 15% auto; /* Centered vertically */
+  padding: 20px;
+  border: 2px;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+  border-radius: 18px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Close button */
+/* .close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(255, 0, 0);
+  text-decoration: none;
+} */
+
+/* Modal button */
+/* .modal-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+} */
+
+/*---------------------
+  Results
+-----------------------*/
+
+/* Results Section Styling */
+.results {
+  padding: 50px 0;
+  background-color: #0d0221; /* Dark background */
+  position: relative;
+}
+
+.results-title {
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: slideIn 1s ease-out;
+}
+
+/* Table Styling */
+.table-responsive {
+  margin-top: 20px;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #1c1b29; /* Table background */
+  color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transform: translateY(20px);
+  animation: fadeInTable 1s ease-out forwards;
+}
+
+.results-table th,
+.results-table td {
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #333;
+}
+
+.results-table th {
+  background-color: #2e2d3a;
+  font-weight: 700;
+}
+
+.results-table tr:nth-child(even) {
+  background-color: #252434;
+}
+
+.first-place {
+  color: #ff9800; /* Gold color for first place */
+  font-weight: bold;
+  animation: popUp 1s ease-in-out;
+}
+
+.second-place {
+  color: #4caf50; /* Green color for second place */
+  font-weight: bold;
+  animation: popUp 1s ease-in-out;
+}
+
+.third-place {
+  color: #2196f3; /* Blue color for third place */
+  font-weight: bold;
+  animation: popUp 1s ease-in-out;
+}
+
+/* View Results Button */
+.view-all-button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 30px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #007bff; /* Button blue */
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.4s ease-in-out;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.view-all-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+  animation: buttonHover 0.3s ease-in-out;
+}
+
+/* Animation Effects */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInTable {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popUp {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes buttonHover {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
 }
 
 /*---------------------
@@ -1925,7 +2255,7 @@ section {
     max-width: 150px;
   }
   .set-bg {
-    background-position: top left;
+    background-position: top right;
   }
   .nav-logo {
     width: 70px;
