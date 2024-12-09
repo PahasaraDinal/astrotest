@@ -116,21 +116,12 @@
     </div>
     <!-- Breadcrumb End -->
 
-    <section class="results spad">
+    <section class="results">
       <div class="container">
-        <!-- Topic Header -->
-        <div class="row text-center">
-          <div class="col-lg-12">
-            <h2 class="results-title">
-              The Dark Edge '24 - 1st Round Results & Selected Teams
-            </h2>
-          </div>
-        </div>
-
         <div class="container-results">
           <div class="tabs">
             <button class="tab-button active" data-tab="first-results">
-              First Round Results
+              First Round Selected Teams
             </button>
             <button class="tab-button" data-tab="school-codes">
               School Codes
@@ -143,16 +134,21 @@
               <input
                 type="text"
                 id="search-input-first"
-                placeholder="Search by school name, team code, or marks..."
+                placeholder="Search by school name or team code..."
               />
             </div>
-            <table class="team-table">
+            <div class="d-flex justify-content-between mb-3">
+              <span class="text-white-50">Selected Teams - Top 20</span>
+              <a class="text-center result-btn" href="#">View Full Results</a>
+            </div>
+            <div class="results-cards" id="results-cards-first"></div>
+            <table class="team-table desktop-only">
               <thead>
                 <tr>
+                  <th>Place</th>
                   <th>School Name</th>
                   <th>Team Code</th>
                   <th>Marks</th>
-                  <th>Place</th>
                 </tr>
               </thead>
               <tbody id="team-table-body-first"></tbody>
@@ -165,10 +161,11 @@
               <input
                 type="text"
                 id="search-input-school"
-                placeholder="Search by school name or team code..."
+                placeholder="Search by school name"
               />
             </div>
-            <table class="team-table">
+            <div class="results-cards" id="results-cards-school"></div>
+            <table class="team-table desktop-only">
               <thead>
                 <tr>
                   <th>School Name</th>
