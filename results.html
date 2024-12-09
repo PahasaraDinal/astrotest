@@ -24,7 +24,6 @@
     <link href="css/magnific-popup.css" rel="stylesheet" type="text/css" />
     <link href="css/slicknav.min.css" rel="stylesheet" type="text/css" />
     <link href="css/style.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="result.css">
     <link
       href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700"
       rel="stylesheet"
@@ -117,83 +116,72 @@
     </div>
     <!-- Breadcrumb End -->
 
-    <!-- About Section Begin -->
-    <!-- <section class="about spad">
+    <section class="results spad">
       <div class="container">
-        <div class="row">
-          <div class="col">
-            <h4 class="result-bg bg-dark">
-              The results will be available once the competition begins!
-            </h4>
+        <!-- Topic Header -->
+        <div class="row text-center">
+          <div class="col-lg-12">
+            <h2 class="results-title">
+              The Dark Edge '24 - 1st Round Results & Selected Teams
+            </h2>
+          </div>
+        </div>
+
+        <div class="container-results">
+          <div class="tabs">
+            <button class="tab-button active" data-tab="first-results">
+              First Round Results
+            </button>
+            <button class="tab-button" data-tab="school-codes">
+              School Codes
+            </button>
+          </div>
+
+          <!-- First Round Results -->
+          <div class="table-wrapper" id="first-results" style="display: block">
+            <div class="search-bar">
+              <input
+                type="text"
+                id="search-input-first"
+                placeholder="Search by school name, team code, or marks..."
+              />
+            </div>
+            <table class="team-table">
+              <thead>
+                <tr>
+                  <th>School Name</th>
+                  <th>Team Code</th>
+                  <th>Marks</th>
+                  <th>Place</th>
+                </tr>
+              </thead>
+              <tbody id="team-table-body-first"></tbody>
+            </table>
+          </div>
+
+          <!-- School Codes -->
+          <div class="table-wrapper" id="school-codes" style="display: none">
+            <div class="search-bar">
+              <input
+                type="text"
+                id="search-input-school"
+                placeholder="Search by school name or team code..."
+              />
+            </div>
+            <table class="team-table">
+              <thead>
+                <tr>
+                  <th>School Name</th>
+                  <th>Team Code</th>
+                  <th>Team</th>
+                </tr>
+              </thead>
+              <tbody id="team-table-body-school"></tbody>
+            </table>
           </div>
         </div>
       </div>
-    </section> -->
-    <!-- About Section End -->
-
-    <section class="results spad">
-      <div class="container">
-          <!-- Topic Header -->
-          <div class="row text-center fadeIn">
-              <div class="col-lg-12">
-                  <h2 class="results-title">The Dark Edge '24 - 1st Round Results & Selected Teams</h2>
-              </div>
-          </div>
-
-          <!-- Results Table -->
-          <div class="row">
-              <div class="col-lg-12">
-                  <div class="table-responsive fadeIn">
-                      <table class="results-table">
-                          <thead>
-                              <tr>
-                                  <th>School Code</th>
-                                  <th>Marks</th>
-                                  <th>Place</th>
-                              </tr>
-                          </thead>
-                          <tbody>
-                              <tr>
-                                  <td>SC001</td>
-                                  <td>85</td>
-                                  <td class="first-place">1st Place</td>
-                              </tr>
-                              <tr>
-                                  <td>SC002</td>
-                                  <td>90</td>
-                                  <td class="second-place">2nd Place</td>
-                              </tr>
-                              <tr>
-                                  <td>SC003</td>
-                                  <td>78</td>
-                                  <td class="third-place">3rd Place</td>
-                              </tr>
-                              <tr>
-                                  <td>SC004</td>
-                                  <td>88</td>
-                                  <td>4th Place</td>
-                              </tr>
-                              <tr>
-                                <td>SC005</td>
-                                <td>90</td>
-                                <td>5th Place</td>
-                            </tr>
-                          </tbody>
-                      </table>
-                  </div>
-              </div>
-          </div>
-
-          <!-- View All Results Button -->
-          <div class="row text-center">
-              <div class="col-lg-12">
-                  <a href="results-full.html" class="view-all-button fadeIn">View All Results</a>
-              </div>
-          </div>
-      </div>
-  </section>
-</body>
-</html>
+    </section>
 
     <!-- Footer Section Begin -->
     <footer class="footer">
@@ -223,66 +211,7 @@
             </div>
           </div>
         </div>
-        <!-- <div class="footer__option">
-          <div class="row text-center text-md-left">
-            <div class="col-lg-4 col-md-12 col-sm-12">
-              <div class="footer__option__item text-lg-left text-center">
-                <h5>About us</h5>
-                <p>
-                  The Astronomy and Space Science Association of Richmond
-                  College, founded in 1988, is one of the leading school-based
-                  astronomical associations.
-                </p>
-                <a
-                  class="read__more"
-                  href="https://www.facebook.com/assarc"
-                  target="_blank"
-                >
-                  Read more
-                  <span class="arrow_right"> </span>
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="footer__option__item text-md-center">
-                <h5>Who we are</h5>
-                <ul>
-                  <li>
-                    <a href="#"> Team </a>
-                  </li>
-                  <li>
-                    <a href="#"> Carrers </a>
-                  </li>
-                  <li>
-                    <a href="#"> Contact us </a>
-                  </li>
-                  <li>
-                    <a href="#"> Locations </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="footer__option__item text-md-center">
-                <h5>Our work</h5>
-                <ul>
-                  <li>
-                    <a href="#"> Feature </a>
-                  </li>
-                  <li>
-                    <a href="#"> Latest </a>
-                  </li>
-                  <li>
-                    <a href="#"> Browse Archive </a>
-                  </li>
-                  <li>
-                    <a href="#"> Video for web </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div> -->
+
         <div class="footer__copyright">
           <div class="row">
             <div class="col-lg-12 text-center">
@@ -308,6 +237,8 @@
     <script src="js/masonry.pkgd.min.js"></script>
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/owl.carousel.min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/results.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
